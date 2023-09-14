@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../server');//changed from /app to /server
 var debug = require('debug')('calendar-project2:server');
 var http = require('http');
 

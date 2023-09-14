@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Event<br>Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% events.forEach(function(e) { %>
+      <tr>
+        <td><%= e.event %></td>
+        <td><%= e.eventDate %></td>
+        <td><a href="/events/<%= m._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>

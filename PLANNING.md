@@ -12,7 +12,7 @@
 4. As a user, when viewing the 'details' page, i want to be able to add a new name to the guest list.
 5. As a user, I want to be able to create events, by entering the information on a page that has a form and submitting it.(new functionality)
 6. As a user, I want to be able to a access each view via a navigation bar at the top of the page with links to 'All Events' and 'Add event'
-
+7. As a user, I want to be able to delete an event
 ## ERD
 
     User--------<Events
