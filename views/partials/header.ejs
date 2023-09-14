@@ -15,11 +15,10 @@
           <a href="/events/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
           <a href="/logout">LOG OUT</a>
         <% } else { %>
-          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png" width="30px" height="30px"></a>
         <% } %>
       </nav>
   <a href="/newEvent.ejs">New Event</a>
-   | 
-  <a href="/viewAllEvents">View All Events</a>
+  <!-- <a href="/viewAllEvents">View All Events</a> -->
   <hr>
   <h1><%= title %></h1>
