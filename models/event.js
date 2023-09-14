@@ -7,6 +7,14 @@ const eventSchema = new Schema ({
     location: String,
     guestList: [String]
 },
+{ user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: String,
+  userAvatar: String
+}, 
 {
     timestamps: true
 });
