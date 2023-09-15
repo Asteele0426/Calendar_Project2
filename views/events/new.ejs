@@ -3,12 +3,12 @@
     <h2>Add Event</h2>
     <form action="/events" method="POST">
         <label>Name:
-            <input type="text" name="name">
+            <input type="text" name="eventName">
         </label><br>
         <label>Date:
-            <input type="date" name="date">
+            <input type="text" name="eventDate">
         </label><br>
-        <label>Location: 
+        <label>Location:
             <select name="location">
                 <option value="Roux">Roux</option>
                 <option value="Little Alley">Little Alley</option>
@@ -18,11 +18,12 @@
             </select>
         </label><br>
         <label>Details:
-            <textarea rows="2" cols="20" name="details">
-  </label><br>
-  
-  <button type="submit">Add Event</button>
-</form>
-<p><%= errorMsg %></p>
+        </label><br>
+        <textarea rows="2" cols="20" name="details"></textarea><br>
+        <button type="submit">Add Event</button>
+    </form>
+    <p>
+        <%= errorMsg %>
+    </p>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

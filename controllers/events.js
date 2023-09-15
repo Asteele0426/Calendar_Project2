@@ -1,5 +1,5 @@
-const Events = require('../models/event');
-// const Guest = require('../models/guest');
+const Event = require('../models/event');
+const Guest = require('../models/guest');
 
 module.exports = {
   index,
@@ -14,9 +14,10 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  const event = await Event.findById(req.params.id).populate('guestList');
+  const event = await Event.findById(req.params.id) 
+  // const event = await Event.findById(req.params.id).populate('guestList');
 //   const Guests = await guest.find({ _id: { $nin: event.guestList} }).sort('name');
-  res.render('events/show', { title: 'Event Detail', event, guest });
+  res.render('events/show', { title: 'Event Detail', event, Guest });
 }
 
 function newEvent(req, res) {

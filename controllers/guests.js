@@ -28,9 +28,9 @@ async function create(req, res) {
   // appending a "time" fragment like this... 
   req.body.born += 'T00:00';
   try {
-    await Performer.create(req.body);
+    await Guest.create(req.body);
   } catch (err) {
     console.log(err);
   }
-  res.redirect('/performers/new');
+  res.redirect('/guests/new');
 }

@@ -3,15 +3,14 @@
 <table id="list">
   <thead>
     <tr>
-      <th>Event</th>
-      <th>Event<br>Date</th>
-      <th></th>
+      <th>Event Name</th>
+      <th>Event Date</th>
     </tr>
   </thead>
   <tbody>
-    <% events.forEach(function(e) { %>
+    <% event.forEach(function(e) { %>
       <tr>
-        <td><%= e.event %></td>
+        <td><%= e.eventName %></td>
         <td><%= e.eventDate %></td>
         <td><a href="/events/<%= e._id %>">DETAILS</a></td>
       </tr>
