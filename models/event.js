@@ -1,12 +1,21 @@
 const mongoose = require('mongoose');
-const rsvpSchema = require('./rsvp.js')
-// optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
+const rsvpSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  phoneNumber: {
+    type: Number
+  },
+}, {
 
+  timestamps: true
+});
 const venueSchema = new Schema({
     venue: {
       type: String,
-      enum: ['1920 Tavern', 'Little Alleuy', 'Kimball Hall', 'Variant', 'Gate City']
+      enum: ['1920 Tavern', 'Little Alley', 'Kimball Hall', 'Variant', 'Gate City']
     },
     date: {
       type: Date,
@@ -29,7 +38,7 @@ const eventSchema = new mongoose.Schema({
     default: () => Date.now()+365*24*60*60000
   },
   rsvp: [rsvpSchema]	
-}, {
+},{
   timestamps: true
 });
 

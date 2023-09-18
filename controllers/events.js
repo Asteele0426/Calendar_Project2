@@ -5,7 +5,10 @@ index,
 new: newEvent,
 create,
 show,
-addRsvp
+addRsvp,
+deleteEvent,
+update,
+// updateEventForm
 };
 
 async function index(req, res) {
@@ -31,9 +34,9 @@ async function create(req, res) {
   async function show(req, res) {
     const event = await Event.findById(req.params.id) 
   console.log(event)
-    // const rsvps = await Rsvp.find({ _id: { $nin: event._id } })
+    const rsvps = await Rsvp.find({ _id: { $nin: event._id } })
     // console.log(rsvps)
-     res.render('events/show', { title: 'Event Detail', event,});
+     res.render('events/show', { title: 'Event Detail', event, rsvps});
   }
      async function addRsvp(req, res) {
         const event = await Event.findById(req.params.eventId)
@@ -45,6 +48,38 @@ async function create(req, res) {
     console.log(err)
         }
       }
+
+
+function deleteEvent(req, res, next) {
+	Event.findByIdAndDelete(req.params.id)
+		// .then((event) => {
+		// 	if (!event.user.equals(req.user._id)) throw new Error('Unauthorized')
+		// 	return event.deleteOne()
+		// })
+		.then(() => res.redirect('/events'))
+		.catch(next)
+}
+
+// function updateEventForm(req, res, next) {
+// 	Event.findById(req.params.id)
+// 		.then((event) => {
+// 			res.render('event/edit', {
+// 				event,
+// 				title: 'Details',
+// 			})
+// 		})
+// 		.catch(next)
+// }
+
+function update(req, res, next) {
+	Event.findById(req.params.id)
+		.then((event) => {
+			if (!event.user.equals(req.user._id)) throw new Error('Unauthorized')
+			return event.updateOne(req.body)
+		})
+		.then(() => res.redirect(`/events/${req.params.id}`))
+		.catch(next)
+  }
     
  
 

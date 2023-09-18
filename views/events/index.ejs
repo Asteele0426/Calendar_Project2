@@ -18,6 +18,8 @@
         <td><%= e.eventNo %></td>
         <td><%= e.date %></td>
         <td><a href="events/<%= e._id %>">DETAILS</a></td>
+        <td><form action="/events/<%= e._id %>?_method=DELETE" method="POST">
+          <button type="submit">X</button> </form></td>
       </tr>
     <% }); %>
   </tbody>

@@ -14,37 +14,21 @@
 
 <div>Rsvps</div>
 <ul>
-  <%- rsvps.map(t =>
+  <%- event.rsvp.map(t =>
   `<li>${t.name}</li>`) %>
 </ul>
 
 
   
-  <% if (event.venues.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>venue</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% event.venues.forEach(function(r) { %>
-          <tr>            
-            <td><%= r.venue %></td>
-          </tr>
-        <% }); %>
-      </tbody>
-    </table>
-  <% } %>
+ 
   
 <h2>Add RSVP</h2>
 <form id="add-rsvp-form" action="/rsvps/<%= event._id %>" method="POST">
     <label>name:</label>
     <input type="text" name="name">
-    <label>phone number:</label>
-    <input type="text" name="phone number">
     <input type="submit" value="Add Rsvp">
   </form>  
+
 
        
 <%- include('../partials/footer') %>

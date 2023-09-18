@@ -1,6 +1,8 @@
 ## Event Calendar
+
+https://calendar-project2.onrender.com 
   
-A calendar application that allows the user to view a list of events and their details, add events, and add guests to a guest list. 
+A calendar application that allows the user to view a list of events and their details, add and delete events, and add guests to a guest list. 
 
 ## Technologies Used
     -HTML
@@ -14,5 +16,5 @@ A calendar application that allows the user to view a list of events and their d
 
 ## Icebox Items
     -More engaging user interface with more css
-    -ability to send out invitations to guests emails
+    -ability to send out text invitations to guests phone numbers
     -ability to track RSVPs

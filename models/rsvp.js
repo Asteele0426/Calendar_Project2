@@ -4,18 +4,14 @@ const Schema = mongoose.Schema;
 const rsvpSchema = new Schema({
   name: {
     type: String,
-   
+    required: true
   },
   phoneNumber: {
-    type: Number 
+    type: Number
   },
-  event: { 
-    type: Schema.Types.ObjectId,
-    ref: 'Event'
-
-  }
 }, {
+
   timestamps: true
 });
 
-module.exports = rsvpSchema;
+module.exports = mongoose.model('Rsvp', rsvpSchema);
