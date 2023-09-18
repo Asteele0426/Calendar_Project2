@@ -13,6 +13,6 @@ A calendar application that allows the user to view a list of events and their d
     -OAuth
 
 ## Icebox Items
-    -More engaging user interface
+    -More engaging user interface with more css
     -ability to send out invitations to guests emails
     -ability to track RSVPs

@@ -23,7 +23,8 @@ async function create(req, res) {
 }
 
 async function addRsvp(req, res) {
-    const event = await Event.find(req.params.id)
+    console.log(req.body)
+    const event = await Event.findById(req.params.id)
     event.rsvp.push(req.body.rsvpId)
     await event.save()
     res.redirect(`/events/${event._id}`)

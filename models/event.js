@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const rsvpSchema = require('./rsvp.js')
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
 
@@ -12,7 +13,6 @@ const venueSchema = new Schema({
       default: () => Date.now()+365*24*60*60000
     }
   })
-//above is number 1
 const eventSchema = new mongoose.Schema({
   event: { type: String, enum: ['Wedding', 'Birthday', 'Bat Mitzvah', 'Baby Shower'] },
   eventNo: {
@@ -28,7 +28,7 @@ const eventSchema = new mongoose.Schema({
     type: Date, 
     default: () => Date.now()+365*24*60*60000
   },
-  venues: [venueSchema]	
+  rsvp: [rsvpSchema]	
 }, {
   timestamps: true
 });

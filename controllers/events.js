@@ -31,9 +31,9 @@ async function create(req, res) {
   async function show(req, res) {
     const event = await Event.findById(req.params.id) 
   console.log(event)
-    const rsvps = await Rsvp.find({ _id: { $nin: event._id } })
-    console.log(rsvps)
-     res.render('events/show', { title: 'Event Detail', event, rsvps});
+    // const rsvps = await Rsvp.find({ _id: { $nin: event._id } })
+    // console.log(rsvps)
+     res.render('events/show', { title: 'Event Detail', event,});
   }
      async function addRsvp(req, res) {
         const event = await Event.findById(req.params.eventId)

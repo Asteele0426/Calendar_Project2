@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mongoose Movies</title>
+  <title>Mongoose Events</title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
@@ -14,6 +14,11 @@
     <a href="/events/new">New Event</a>
     &nbsp;|&nbsp;
     <a href="/events">All Events</a>
+    <% if (user) { %>
+      <a class="nav-link" href="/logout">Log Out</a>
+      <a class="nav-link" href="/events">Events</a>
+  <% } else { %>
+      <a class="nav-link" href="/auth/google">Log In</a>
+  <% } %>
   </nav>
   
-  <!-- #change line 14 and 16 to the views file once we create it  -->

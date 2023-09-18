@@ -1,8 +1,8 @@
 var express = require('express');
-var router = express.Router();
+const router = express.Router();
 const rsvpCtrl = require('../controllers/rsvps')
 router.get('/rsvps/new/:id', rsvpCtrl.new)
-router.post('/rsvps/:id', rsvpCtrl.create)
-router.post('/events/:id/rsvps', rsvpCtrl.addRsvp)
+router.post('/:id', rsvpCtrl.addRsvp)
+router.post('/events/:id/rsvps', rsvpCtrl.create)
 module.exports = router
 

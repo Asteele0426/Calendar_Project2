@@ -18,4 +18,4 @@ const rsvpSchema = new Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('Rsvp', rsvpSchema);
+module.exports = rsvpSchema;
