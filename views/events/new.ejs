@@ -1,29 +1,31 @@
 <%- include('../partials/header') %>
 
-    <h2>Add Event</h2>
-    <form action="/events" method="POST">
-        <label>Name:
-            <input type="text" name="eventName">
-        </label><br>
-        <label>Date:
-            <input type="date" name="eventDate">
-        </label><br>
-        <label>Location:
-            <select name="location">
-                <option value="Roux">Roux</option>
-                <option value="Little Alley">Little Alley</option>
-                <option value="Cherried Marys">Cherried Marys</option>
-                <option value="1920 Tavern">1920 Tavern</option>
-                <option value="Kimball Hall">Kimball Hall</option>
-            </select>
-        </label><br>
-        <label>Details:
-        </label><br>
-        <textarea rows="2" cols="20" name="details"></textarea><br>
-        <button type="submit">Add Event</button>
-    </form>
-    <p>
-        <%= errorMsg %>
-    </p>
+<h2>Enter a New Event</h2>
+<form action="/events" method="POST">
+  <label>Event:
+    <select name="event"><option value="Wedding">Wedding</option>
+      <option value="Birthday">Birthday</option>
+      <option value="Bat Mitzvah">Bat Mitzvah</option>
+      <option value="Baby Shower">Baby Shower</option>
+    </select>
+      </label><br>
+  <label>Venue:
+    <select name="venue">
+      <option value="1920 Tavern">1920 Tavern</option>
+      <option value="Little Alley">Little Alley</option>
+      <option value="Kimball Hall">Kimball Hall</option>
+      <option value="Gate City">Gate City</option>
+      <option value="Variant">Variant</option>
+    </select>
+      </label><br>  
+  <label>Event Number:
+    <input type="text" name="eventNo">
+  </label><br>
+  <label>Date 
+    <input type="date" name="date">
+  </label><br>
+  <button type="submit">Add Event</button>
+</form>
+<p><%= errorMsg %></p>
 
-    <%- include('../partials/footer') %>
+<%- include('../partials/footer') %>

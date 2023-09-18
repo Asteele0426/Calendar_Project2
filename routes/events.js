@@ -1,12 +1,12 @@
-const express = require('express');
-const router = express.Router();
-const eventsCtrl = require('../controllers/events.js');
-const ensureLoggedIn = require('../config/ensureLoggedIn');
-	
-router.get('/', eventsCtrl.index);
+var express = require('express');
+var router = express.Router();
+const eventCtrl = require('../controllers/events')
+/* GET users listing. */
+router.get('/', eventCtrl.index );
+router.get('/new', eventCtrl.new)
+router.post('/', eventCtrl.create)
+router.get('/:id', eventCtrl.show);
 
-router.get('/new', ensureLoggedIn, eventsCtrl.new);
-router.get('/:id', eventsCtrl.show);
-router.post('/', ensureLoggedIn, eventsCtrl.create);
-	
 module.exports = router;
+
+

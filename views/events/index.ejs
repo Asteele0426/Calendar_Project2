@@ -1,21 +1,27 @@
 <%- include('../partials/header') %>
 
-<table id="list">
+<h2>Events</h2>
+<table>
   <thead>
     <tr>
-      <th>Event Name</th>
-      <th>Event Date</th>
+      <th>Event</th>
+      <th>Venue</th>
+      <th>Event Number</th>
+      <th>Date</th>
     </tr>
   </thead>
   <tbody>
-    <% event.forEach(function(e) { %>
+    <% events.forEach(function(e) { %>
       <tr>
-        <td><%= e.eventName %></td>
-        <td><%= e.eventDate %></td>
+        <td><%= e.event %></td>
+        <td><%= e.venue %></td>
+        <td><%= e.eventNo %></td>
+        <td><%= e.date %></td>
         <td><a href="events/<%= e._id %>">DETAILS</a></td>
       </tr>
-      <% }); %>
-    </tbody>
-  </table>
-  
-<%- include('../partials/footer') %>
+    <% }); %>
+  </tbody>
+</table>
+
+<%- include('../partials/header') %>
+
