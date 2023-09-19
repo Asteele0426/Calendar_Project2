@@ -1,8 +1,21 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(https://media.istockphoto.com/id/1127969956/video/explosion-of-confetti.jpg?s=640x640&k=20&c=3wLItoUkFAYHcpPbuheS7O59pYzpoSiYtEbMUZN8lGY=);
+ 
 }
 
 a {
   color: #00B7FF;
+}
+
+h2 {
+  color: rgb(214, 40, 159);
+  font-style: bold;
+  font-size: 50px;
+}
+
+body {
+  font-size: 50;
+  
 }

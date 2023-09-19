@@ -1,15 +1,19 @@
 <%- include('../partials/header') %>
 
+<br>
 <section id="show-page">
   <div>Event: </div>
   <div><%= event.event %></div>
+  <br>
   <div>Venue: </div>
   <div><%= event.venue %></div>
+  <br>
   <div>Event Number: </div>
   <div><%= event.eventNo %></div>
+  <br>
   <div>Date: </div>
   <div><%= event.date %></div>
-  
+  <br>
 </section>
 
 <div>Rsvps</div>
@@ -23,6 +27,7 @@
  
   
 <h2>Add RSVP</h2>
+<hr>
 <form id="add-rsvp-form" action="/rsvps/<%= event._id %>" method="POST">
     <label>name:</label>
     <input type="text" name="name">

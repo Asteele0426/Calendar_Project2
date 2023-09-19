@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
 <h2>Events</h2>
+<hr>
 <table>
   <thead>
     <tr>
@@ -21,9 +22,10 @@
         <td><form action="/events/<%= e._id %>?_method=DELETE" method="POST">
           <button type="submit">X</button> </form></td>
       </tr>
+      
     <% }); %>
   </tbody>
 </table>
-
+<br>
 <%- include('../partials/header') %>
 
