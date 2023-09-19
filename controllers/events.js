@@ -8,7 +8,7 @@ show,
 addRsvp,
 deleteEvent,
 update,
-// updateEventForm
+
 };
 
 async function index(req, res) {
@@ -52,24 +52,11 @@ async function create(req, res) {
 
 function deleteEvent(req, res, next) {
 	Event.findByIdAndDelete(req.params.id)
-		// .then((event) => {
-		// 	if (!event.user.equals(req.user._id)) throw new Error('Unauthorized')
-		// 	return event.deleteOne()
-		// })
+	
 		.then(() => res.redirect('/events'))
 		.catch(next)
 }
 
-// function updateEventForm(req, res, next) {
-// 	Event.findById(req.params.id)
-// 		.then((event) => {
-// 			res.render('event/edit', {
-// 				event,
-// 				title: 'Details',
-// 			})
-// 		})
-// 		.catch(next)
-// }
 
 function update(req, res, next) {
 	Event.findById(req.params.id)

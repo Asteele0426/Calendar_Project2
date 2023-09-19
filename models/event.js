@@ -40,6 +40,7 @@ const eventSchema = new mongoose.Schema({
   rsvp: [rsvpSchema]	
 },{
   timestamps: true
+  
 });
 
 module.exports = mongoose.model('Event', eventSchema);
